@@ -1,2 +1,2 @@
 # Teste
- teste repositorio
+jogo de pedra papel e tesoura para treinar
