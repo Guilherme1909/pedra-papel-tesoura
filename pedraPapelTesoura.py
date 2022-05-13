@@ -24,10 +24,22 @@ def main():
     acabou = False
     while acabou is False:
         menu()
-        p1 = int(input('Qual sua escolha? '))
-        while p1 < 1 or p1 > 3:
-            print('Jogada inválida! Insira um valor correspondente às opções!')
-            p1 = int(input('Qual sua escolha? '))
+        p1 = input('Qual sua escolha? ').lower()
+        if p1.isalpha() is True:
+            if p1 != 'pedra' and p1 != 'papel' and p1 != 'tesoura':
+                print('Jogada inválida! Insira um valor correspondente às opções!')
+                continue
+            if p1 == 'pedra':
+                p1 = 1
+            if p1 == 'papel':
+                p1 = 2
+            if p1 == 'tesoura':
+                p1 = 3
+        else:
+            p1 = int(p1)
+            if p1 < 1 or p1 > 3:
+                print('Jogada inválida! Insira um valor correspondente às opções!')
+                continue
 
         pc = randint(0, 2)
 
